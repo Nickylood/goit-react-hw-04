@@ -1,0 +1,23 @@
+.btn {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #000;
+  font-size: 20px;
+  display: flex;
+  padding: 4px 15px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background: linear-gradient(
+    135deg,
+    rgba(6, 84, 180, 0.65) 0%,
+    rgba(205, 67, 189, 0.65) 43%,
+    rgba(10, 23, 215, 0) 100%
+  );
+  color: rgb(63, 63, 125);
+}
+.btn:hover,
+.btn:focus {
+  color: black;
+  border: 1px solid rgb(0, 0, 0);
+}

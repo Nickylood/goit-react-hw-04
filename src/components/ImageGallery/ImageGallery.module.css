@@ -1,0 +1,17 @@
+.gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-flow: dense;
+  grid-gap: 20px;
+  width: 100%;
+}
+.item {
+  width: 100%;
+  height: 160px;
+}
+.item:hover {
+  transform: scale(1.1);
+}
