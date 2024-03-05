@@ -4,7 +4,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import ImageGallery from '../ImageGallery/ImageGallery';
 import { fetchImages } from '../../imgApi';
 import Loader from '../Loader/Loader';
-import { Toaster, useToaster } from 'react-hot-toast';
+import { Toaster } from "react-hot-toast";
 import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
 import ImageModal from '../ImageModal/ImageModal';
 export default function App() {
@@ -13,7 +13,6 @@ export default function App() {
   const [error, setError] = useState(false);
   const [page, setPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
-  const toast = useToaster();
   const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
@@ -72,6 +71,9 @@ export default function App() {
           onRequestClose={() => setSelectedImage(null)}
           imageUrl={selectedImage.urls.large}
           imageAlt={selectedImage.alt}
+          likes={selectedImage.likes}
+          author={selectedImage.user.name}
+          description={selectedImage.description}
         />
       )}
     </div>
